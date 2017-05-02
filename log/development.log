@@ -363,3 +363,80 @@ puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
 puma (3.8.2) lib/puma/server.rb:435:in `process_client'
 puma (3.8.2) lib/puma/server.rb:299:in `block in run'
 puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-05-03 00:11:11 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /var/lib/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-05-03 00:11:16 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 13ms (Views: 2.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2017-05-03 00:11:20 +0300
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+Completed 200 OK in 8ms (Views: 1.5ms | ActiveRecord: 2.2ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "companies" ("name", "invitation_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "First Company"], ["invitation_code", "firstCompany2016"], ["created_at", 2017-05-02 21:22:22 UTC], ["updated_at", 2017-05-02 21:22:22 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("name", "invitation_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Second Company"], ["invitation_code", "secondCompany2016"], ["created_at", 2017-05-02 21:22:22 UTC], ["updated_at", 2017-05-02 21:22:22 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "role", "password", "company_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "First User"], ["email", "user@example.com"], ["role", "role"], ["password", "password"], ["company_id", 1], ["created_at", 2017-05-02 21:22:22 UTC], ["updated_at", 2017-05-02 21:22:22 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "role", "password", "company_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Second User"], ["email", "user@example.com"], ["role", "role"], ["password", "password"], ["company_id", 1], ["created_at", 2017-05-02 21:22:22 UTC], ["updated_at", 2017-05-02 21:22:22 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "teams" ("name", "company_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "First Team"], ["company_id", 1], ["user_id", 1], ["created_at", 2017-05-02 21:22:22 UTC], ["updated_at", 2017-05-02 21:22:22 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "teams" ("name", "company_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Second Team"], ["company_id", 2], ["user_id", 2], ["created_at", 2017-05-02 21:22:22 UTC], ["updated_at", 2017-05-02 21:22:22 UTC]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "goals" ("title", "goal", "goal_date", "goal_progress", "description", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "First Goal"], ["goal", 100], ["goal_date", 2017-05-02 21:22:22 UTC], ["goal_progress", 0], ["description", "First Goal's description"], ["slug", "first-goal"], ["created_at", 2017-05-02 21:22:22 UTC], ["updated_at", 2017-05-02 21:22:22 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "goal", "goal_date", "goal_progress", "description", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Second Goal"], ["goal", 100], ["goal_date", 2017-05-02 21:22:22 UTC], ["goal_progress", 0], ["description", "Second Goal's description"], ["slug", "second-goal"], ["created_at", 2017-05-02 21:22:22 UTC], ["updated_at", 2017-05-02 21:22:22 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "goals" ("title", "goal", "goal_date", "goal_progress", "description", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Third Goal"], ["goal", 100], ["goal_date", 2017-05-02 21:22:22 UTC], ["goal_progress", 0], ["description", "Third Goal's description"], ["slug", "third-goal"], ["created_at", 2017-05-02 21:22:22 UTC], ["updated_at", 2017-05-02 21:22:22 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "activities" ("body", "progress", "goal_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["body", "First Activity's body"], ["progress", 10], ["goal_id", 1], ["user_id", 1], ["created_at", 2017-05-02 21:22:22 UTC], ["updated_at", 2017-05-02 21:22:22 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("body", "progress", "goal_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["body", "Second Activity's body"], ["progress", 10], ["goal_id", 2], ["user_id", 2], ["created_at", 2017-05-02 21:22:22 UTC], ["updated_at", 2017-05-02 21:22:22 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "company_goals" ("goal_id", "company_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["goal_id", 1], ["company_id", 1], ["created_at", 2017-05-02 21:22:22 UTC], ["updated_at", 2017-05-02 21:22:22 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "user_goals" ("goal_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["goal_id", 2], ["user_id", 1], ["created_at", 2017-05-02 21:22:22 UTC], ["updated_at", 2017-05-02 21:22:22 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "team_goals" ("team_id", "goal_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["team_id", 1], ["goal_id", 3], ["created_at", 2017-05-02 21:22:22 UTC], ["updated_at", 2017-05-02 21:22:22 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "team_users" ("team_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["team_id", 1], ["user_id", 1], ["created_at", 2017-05-02 21:22:22 UTC], ["updated_at", 2017-05-02 21:22:22 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "team_users" ("team_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["team_id", 2], ["user_id", 2], ["created_at", 2017-05-02 21:22:22 UTC], ["updated_at", 2017-05-02 21:22:22 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users" for 127.0.0.1 at 2017-05-03 00:22:29 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 15ms (Views: 8.2ms | ActiveRecord: 3.3ms)
+
+
