@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: goal_tracker_api_development
+
+test:
+  <<: *default
+  database: goal_tracker_api_test
+
+production:
+  <<: *default
+  database: goal_tracker_api_production
+  username: 
+  password:

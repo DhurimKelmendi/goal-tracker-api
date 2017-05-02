@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  goal: 1
+  goal_date: 2017-05-02 14:37:32
+  goal_progress: 1
+  description: MyText
+  slug: MyString
+
+two:
+  title: MyString
+  goal: 1
+  goal_date: 2017-05-02 14:37:32
+  goal_progress: 1
+  description: MyText
+  slug: MyString
