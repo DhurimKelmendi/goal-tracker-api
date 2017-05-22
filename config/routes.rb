@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get :token, controller: 'application'
+  
   resources :company_goals
   resources :user_goals
   resources :team_users
