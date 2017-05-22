@@ -474,3 +474,746 @@ Processing by GoalsController#index as HTML
 Completed 200 OK in 25ms (Views: 16.8ms | ActiveRecord: 4.9ms)
 
 
+Started GET "/goals" for 127.0.0.1 at 2017-05-03 03:44:57 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.5ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."goal_id" = $1[0m  [["goal_id", 1]]
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 6.8ms)
+
+
+  
+NoMethodError (undefined method `belongs_to' for ActivitySerializer:Class):
+  
+app/serializers/activity_serializer.rb:4:in `<class:ActivitySerializer>'
+app/serializers/activity_serializer.rb:1:in `<top (required)>'
+app/controllers/goals_controller.rb:8:in `index'
+Started GET "/goals" for 127.0.0.1 at 2017-05-03 03:46:05 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.5ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."goal_id" = $1[0m  [["goal_id", 1]]
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 5.7ms)
+
+
+  
+NoMethodError (undefined method `belongs_to' for ActivitySerializer:Class):
+  
+app/serializers/activity_serializer.rb:4:in `<class:ActivitySerializer>'
+app/serializers/activity_serializer.rb:1:in `<top (required)>'
+app/controllers/goals_controller.rb:8:in `index'
+Started GET "/goals" for 127.0.0.1 at 2017-05-03 03:46:08 +0300
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.8ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."goal_id" = $1[0m  [["goal_id", 1]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.6ms)
+
+
+  
+NoMethodError (undefined method `belongs_to' for ActivitySerializer:Class):
+  
+app/serializers/activity_serializer.rb:4:in `<class:ActivitySerializer>'
+app/serializers/activity_serializer.rb:1:in `<top (required)>'
+app/controllers/goals_controller.rb:8:in `index'
+Started GET "/goals" for 127.0.0.1 at 2017-05-03 03:47:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.5ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."goal_id" = $1[0m  [["goal_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 9.5ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/controllers/goals_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 03:51:44 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 3.4ms)
+
+
+  
+NameError (uninitialized constant UserSerializer::SubjectSerializer):
+  
+app/serializers/user_serializer.rb:9:in `company'
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 03:52:00 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUserGoal Load (0.5ms)[0m  [1m[34mSELECT "user_goals".* FROM "user_goals" WHERE "user_goals"."user_id" = $1[0m  [["user_id", 1]]
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 10.5ms)
+
+
+  
+NameError (uninitialized constant User::UserTeam):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 03:52:41 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 7.6ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 03:52:44 +0300
+Started GET "/users" for 127.0.0.1 at 2017-05-03 03:52:45 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (99.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (200.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by UsersController#index as HTML
+Started GET "/users" for 127.0.0.1 at 2017-05-03 03:52:47 +0300
+Completed 500 Internal Server Error in 1117ms (ActiveRecord: 398.3ms)
+
+
+  [1m[36mUser Load (199.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  
+SystemStackError (stack level too deep):
+  
+app/controllers/users_controller.rb:8:in `index'
+  [1m[36mCompany Load (200.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 1318ms (ActiveRecord: 598.7ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 03:52:50 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1801.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (600.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 4520ms (ActiveRecord: 2800.4ms)
+
+
+  
+SystemStackError (stack level too deep):
+  [1m[36mUser Load (900.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  
+app/controllers/users_controller.rb:8:in `index'
+  [1m[36mCompany Load (400.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3726ms (ActiveRecord: 1800.2ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 03:53:16 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 7.4ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 03:53:51 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 8.5ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 03:56:17 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 6.9ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 03:57:08 +0300
+Started GET "/users" for 127.0.0.1 at 2017-05-03 03:57:08 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 2.6ms)
+
+
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 9.8ms)
+
+
+  
+  
+NameError (uninitialized constant UserSerializer::UserCompanyShortSerializer):
+NameError (uninitialized constant UserSerializer::UserCompanyShortSerializer):
+  
+  
+app/serializers/user_serializer.rb:4:in `<class:UserSerializer>'
+app/serializers/user_serializer.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:8:in `index'
+app/serializers/user_serializer.rb:4:in `<class:UserSerializer>'
+app/serializers/user_serializer.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 03:58:00 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 3.9ms)
+
+
+  
+NoMethodError (undefined method `belongs_to' for UserSerializer:Class):
+  
+app/serializers/user_serializer.rb:4:in `<class:UserSerializer>'
+app/serializers/user_serializer.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 03:58:13 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 6.4ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:06:08 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 7.0ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:08:30 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 4.1ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into String):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:08:56 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 3.4ms)
+
+
+  
+NoMethodError (undefined method `belongs_to' for UserSerializer:Class):
+  
+app/serializers/user_serializer.rb:4:in `<class:UserSerializer>'
+app/serializers/user_serializer.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:09:09 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 8.3ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into String):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:10:27 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 7.4ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into String):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:12:40 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 3.7ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into String):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:12:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 6.8ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:13:23 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.9ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into String):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:15:03 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 4.4ms)
+
+
+  
+NoMethodError (undefined method `belongs_to' for UserSerializer:Class):
+  
+app/serializers/user_serializer.rb:4:in `<class:UserSerializer>'
+app/serializers/user_serializer.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:15:23 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 3.9ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into String):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:17:32 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 4.2ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into String):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:19:10 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 3.3ms)
+
+
+  
+NoMethodError (undefined method `belongs_to' for UserSerializer:Class):
+  
+app/serializers/user_serializer.rb:4:in `<class:UserSerializer>'
+app/serializers/user_serializer.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:19:23 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 6.5ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into String):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:21:10 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 6.1ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into String):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:24:55 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 4.7ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into String):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:25:09 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUserGoal Load (0.6ms)[0m  [1m[34mSELECT "user_goals".* FROM "user_goals" WHERE "user_goals"."user_id" = $1[0m  [["user_id", 1]]
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 9.5ms)
+
+
+  
+NameError (uninitialized constant User::UserTeam):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:27:40 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 7.0ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:28:00 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 6.4ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into String):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:28:18 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 6.6ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into String):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:29:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 6.8ms)
+
+
+  
+NoMethodError (undefined method `user_goal' for #<User:0x007f85540e25c8>
+Did you mean?  user_goals
+               user_goals=):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:29:18 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUserGoal Load (0.3ms)[0m  [1m[34mSELECT "user_goals".* FROM "user_goals" WHERE "user_goals"."user_id" = $1[0m  [["user_id", 1]]
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 8.8ms)
+
+
+  
+NoMethodError (undefined method `object' for #<UserGoal:0x007fd908011060>
+Did you mean?  object_id):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:33:16 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 3.8ms)
+
+
+  
+NoMethodError (undefined method `belongs_to' for UserSerializer:Class):
+  
+app/serializers/user_serializer.rb:4:in `<class:UserSerializer>'
+app/serializers/user_serializer.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:33:56 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 3.7ms)
+
+
+  
+NoMethodError (undefined method `companies' for #<User:0x007fa2d0093c68>
+Did you mean?  company
+               company_id
+               company_id_was
+               company=):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:34:21 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 9.6ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:35:07 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+SyntaxError (/home/dhurim/goal-tracker-api/app/controllers/users_controller.rb:8: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... render json: @users, include "users.company, users.team_use...
+...                               ^):
+  
+app/controllers/users_controller.rb:8: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:35:29 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+SyntaxError (/home/dhurim/goal-tracker-api/app/controllers/users_controller.rb:8: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+... render json: @users, include "@users.company, @users.team_u...
+...                               ^):
+  
+app/controllers/users_controller.rb:8: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:36:12 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (uninitialized constant ApplicationController::ActiveModelSerializers):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:39:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUserGoal Load (0.4ms)[0m  [1m[34mSELECT "user_goals".* FROM "user_goals" WHERE "user_goals"."user_id" = $1[0m  [["user_id", 1]]
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 10.4ms)
+
+
+  
+NameError (uninitialized constant User::UserTeam):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-03 04:40:21 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUserGoal Load (0.3ms)[0m  [1m[34mSELECT "user_goals".* FROM "user_goals" WHERE "user_goals"."user_id" = $1[0m  [["user_id", 1]]
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 9.4ms)
+
+
+  
+NameError (uninitialized constant User::UserTeam):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-22 18:18:28 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (1.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUserGoal Load (1.5ms)[0m  [1m[34mSELECT "user_goals".* FROM "user_goals" WHERE "user_goals"."user_id" = $1[0m  [["user_id", 1]]
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 14.7ms)
+
+
+  
+NameError (uninitialized constant User::UserTeam):
+  
+app/controllers/users_controller.rb:8:in `index'
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-05-22 18:18:29 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/companies" for 127.0.0.1 at 2017-05-22 18:18:35 +0300
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.7ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."company_id" = $1 LIMIT $2[0m  [["company_id", 1], ["LIMIT", 1]]
+  [1m[36mUserGoal Load (0.3ms)[0m  [1m[34mSELECT "user_goals".* FROM "user_goals" WHERE "user_goals"."user_id" = $1[0m  [["user_id", 2]]
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.8ms)
+
+
+  
+NameError (uninitialized constant User::UserTeam):
+  
+app/controllers/companies_controller.rb:8:in `index'
+Started GET "/goals" for 127.0.0.1 at 2017-05-22 18:18:40 +0300
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (1.0ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+  [1m[36mActivity Load (1.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."goal_id" = $1[0m  [["goal_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 8.1ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/controllers/goals_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2017-05-22 18:19:47 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 18ms (Views: 8.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-05-22 18:19:58 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 33.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2017-05-22 18:20:43 +0300
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."company_id" = $1 LIMIT $2[0m  [["company_id", 1], ["LIMIT", 1]]
+  [1m[36mCompanyGoal Load (1.3ms)[0m  [1m[34mSELECT "company_goals".* FROM "company_goals" WHERE "company_goals"."company_id" = $1[0m  [["company_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."company_id" = $1 LIMIT $2[0m  [["company_id", 2], ["LIMIT", 1]]
+  [1m[36mCompanyGoal Load (0.2ms)[0m  [1m[34mSELECT "company_goals".* FROM "company_goals" WHERE "company_goals"."company_id" = $1[0m  [["company_id", 2]]
+Completed 200 OK in 48ms (Views: 40.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/goals" for 127.0.0.1 at 2017-05-22 18:20:48 +0300
+Processing by GoalsController#index as HTML
+  [1m[36mGoal Load (0.7ms)[0m  [1m[34mSELECT "goals".* FROM "goals"[0m
+Completed 200 OK in 19ms (Views: 10.2ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2017-05-22 18:20:54 +0300
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (1.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 31.2ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2017-05-22 18:21:05 +0300
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeamGoal Load (1.8ms)[0m  [1m[34mSELECT "team_goals".* FROM "team_goals" WHERE "team_goals"."team_id" = $1[0m  [["team_id", 1]]
+  [1m[36mTeamGoal Load (0.4ms)[0m  [1m[34mSELECT "team_goals".* FROM "team_goals" WHERE "team_goals"."team_id" = $1[0m  [["team_id", 2]]
+Completed 200 OK in 71ms (Views: 57.4ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2017-05-22 18:23:15 +0300
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."company_id" = $1 LIMIT $2[0m  [["company_id", 1], ["LIMIT", 1]]
+  [1m[36mCompanyGoal Load (0.4ms)[0m  [1m[34mSELECT "company_goals".* FROM "company_goals" WHERE "company_goals"."company_id" = $1[0m  [["company_id", 1]]
+  [1m[36mGoal Load (0.5ms)[0m  [1m[34mSELECT  "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."company_id" = $1 LIMIT $2[0m  [["company_id", 2], ["LIMIT", 1]]
+  [1m[36mCompanyGoal Load (0.4ms)[0m  [1m[34mSELECT "company_goals".* FROM "company_goals" WHERE "company_goals"."company_id" = $1[0m  [["company_id", 2]]
+Completed 200 OK in 67ms (Views: 56.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2017-05-22 18:23:38 +0300
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."company_id" = $1 LIMIT $2[0m  [["company_id", 1], ["LIMIT", 1]]
+  [1m[36mCompanyGoal Load (0.3ms)[0m  [1m[34mSELECT "company_goals".* FROM "company_goals" WHERE "company_goals"."company_id" = $1[0m  [["company_id", 1]]
+  [1m[36mGoal Load (0.4ms)[0m  [1m[34mSELECT  "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."company_id" = $1 LIMIT $2[0m  [["company_id", 2], ["LIMIT", 1]]
+  [1m[36mCompanyGoal Load (0.3ms)[0m  [1m[34mSELECT "company_goals".* FROM "company_goals" WHERE "company_goals"."company_id" = $1[0m  [["company_id", 2]]
+Completed 200 OK in 58ms (Views: 51.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2017-05-22 18:23:41 +0300
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."company_id" = $1 LIMIT $2[0m  [["company_id", 1], ["LIMIT", 1]]
+  [1m[36mCompanyGoal Load (0.5ms)[0m  [1m[34mSELECT "company_goals".* FROM "company_goals" WHERE "company_goals"."company_id" = $1[0m  [["company_id", 1]]
+  [1m[36mGoal Load (0.3ms)[0m  [1m[34mSELECT  "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."company_id" = $1 LIMIT $2[0m  [["company_id", 2], ["LIMIT", 1]]
+  [1m[36mCompanyGoal Load (0.3ms)[0m  [1m[34mSELECT "company_goals".* FROM "company_goals" WHERE "company_goals"."company_id" = $1[0m  [["company_id", 2]]
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2017-05-22 18:23:42 +0300
+Processing by CompaniesController#index as HTML
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."company_id" = $1 LIMIT $2[0m  [["company_id", 1], ["LIMIT", 1]]
+  [1m[36mCompanyGoal Load (0.3ms)[0m  [1m[34mSELECT "company_goals".* FROM "company_goals" WHERE "company_goals"."company_id" = $1[0m  [["company_id", 1]]
+  [1m[36mGoal Load (0.5ms)[0m  [1m[34mSELECT  "goals".* FROM "goals" WHERE "goals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."company_id" = $1 LIMIT $2[0m  [["company_id", 2], ["LIMIT", 1]]
+  [1m[36mCompanyGoal Load (0.2ms)[0m  [1m[34mSELECT "company_goals".* FROM "company_goals" WHERE "company_goals"."company_id" = $1[0m  [["company_id", 2]]
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-05-22 18:24:02 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 28.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2017-05-22 18:24:06 +0300
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeamGoal Load (0.5ms)[0m  [1m[34mSELECT "team_goals".* FROM "team_goals" WHERE "team_goals"."team_id" = $1[0m  [["team_id", 1]]
+  [1m[36mTeamGoal Load (0.4ms)[0m  [1m[34mSELECT "team_goals".* FROM "team_goals" WHERE "team_goals"."team_id" = $1[0m  [["team_id", 2]]
+Completed 200 OK in 69ms (Views: 47.8ms | ActiveRecord: 11.6ms)
+
+
