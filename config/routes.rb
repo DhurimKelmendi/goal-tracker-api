@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get :token, controller: 'application'
+  post 'signup' => 'users#signup', :as => :signup
   
   resources :company_goals
   resources :user_goals
