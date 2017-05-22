@@ -9,7 +9,7 @@ c1 = Company.create(name: 'First Company', invitation_code: 'firstCompany2016')
 c2 = Company.create(name: 'Second Company', invitation_code: 'secondCompany2016')
 
 u1 = User.create(name: 'First User', email: 'user@example.com', password: 'password', role: 'role', company: c1)
-u2 = User.create(name: 'Second User', email: 'user@example.com', password: 'password', role: 'role', company: c1)
+u2 = User.create(name: 'Second User', email: 'user1@example.com', password: 'password', role: 'role', company: c1)
 
 t1 = Team.create(name: 'First Team', user: u1, company: c1)
 t2 = Team.create(name: 'Second Team', user: u2, company: c2)

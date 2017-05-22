@@ -1217,3 +1217,414 @@ Processing by TeamsController#index as HTML
 Completed 200 OK in 69ms (Views: 47.8ms | ActiveRecord: 11.6ms)
 
 
+Started GET "/teams" for 127.0.0.1 at 2017-05-22 21:26:21 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeamGoal Load (0.3ms)[0m  [1m[34mSELECT "team_goals".* FROM "team_goals" WHERE "team_goals"."team_id" = $1[0m  [["team_id", 1]]
+  [1m[36mTeamGoal Load (0.3ms)[0m  [1m[34mSELECT "team_goals".* FROM "team_goals" WHERE "team_goals"."team_id" = $1[0m  [["team_id", 2]]
+Completed 200 OK in 82ms (Views: 61.7ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/tokens" for 127.0.0.1 at 2017-05-22 21:26:25 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/tokens"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/token" for 127.0.0.1 at 2017-05-22 21:26:27 +0300
+Processing by ApplicationController#token as HTML
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/token" for 127.0.0.1 at 2017-05-22 21:26:36 +0300
+Processing by ApplicationController#token as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/token" for 127.0.0.1 at 2017-05-22 21:26:40 +0300
+Processing by ApplicationController#token as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/token" for 127.0.0.1 at 2017-05-22 21:26:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#token as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/token" for 127.0.0.1 at 2017-05-22 21:26:54 +0300
+Processing by ApplicationController#token as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-05-22 21:27:07 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 37.1ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/token" for 127.0.0.1 at 2017-05-22 21:27:14 +0300
+Processing by ApplicationController#token as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (5009.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "goal_tracker_api_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (115.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "goal_tracker_api_development"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "goal_tracker_api_test"[0m
+  [1m[35m (308.0ms)[0m  [1m[35mCREATE DATABASE "goal_tracker_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (260.0ms)[0m  [1m[35mCREATE DATABASE "goal_tracker_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE TABLE "activities" ("id" serial primary key, "body" text, "progress" integer, "goal_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_activities_on_goal_id" ON "activities" USING btree ("goal_id")[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_activities_on_user_id" ON "activities" USING btree ("user_id")[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "companies" ("id" serial primary key, "name" character varying, "invitation_code" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_companies_on_invitation_code" ON "companies" USING btree ("invitation_code")[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "company_goals" ("id" serial primary key, "goal_id" integer, "company_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_company_goals_on_company_id" ON "company_goals" USING btree ("company_id")[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_company_goals_on_goal_id" ON "company_goals" USING btree ("goal_id")[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "goals" ("id" serial primary key, "title" character varying, "goal" integer, "goal_date" timestamp, "goal_progress" integer, "description" text, "slug" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "team_goals" ("id" serial primary key, "team_id" integer, "goal_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_team_goals_on_goal_id" ON "team_goals" USING btree ("goal_id")[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX  "index_team_goals_on_team_id" ON "team_goals" USING btree ("team_id")[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "team_users" ("id" serial primary key, "team_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_team_users_on_team_id" ON "team_users" USING btree ("team_id")[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE  INDEX  "index_team_users_on_user_id" ON "team_users" USING btree ("user_id")[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "teams" ("id" serial primary key, "name" character varying, "company_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_company_id" ON "teams" USING btree ("company_id")[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_user_id" ON "teams" USING btree ("user_id")[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "user_goals" ("id" serial primary key, "goal_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_user_goals_on_goal_id" ON "user_goals" USING btree ("goal_id")[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX  "index_user_goals_on_user_id" ON "user_goals" USING btree ("user_id")[0m
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "email" character varying, "role" character varying, "password" character varying, "auth_token" character varying, "company_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_company_id" ON "users" USING btree ("company_id")[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "activities" ADD CONSTRAINT "fk_rails_86f7bac71f"
+FOREIGN KEY ("goal_id")
+  REFERENCES "goals" ("id")
+[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "activities" ADD CONSTRAINT "fk_rails_7e11bb717f"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "company_goals" ADD CONSTRAINT "fk_rails_c80f554328"
+FOREIGN KEY ("company_id")
+  REFERENCES "companies" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "company_goals" ADD CONSTRAINT "fk_rails_9d00262c45"
+FOREIGN KEY ("goal_id")
+  REFERENCES "goals" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "team_goals" ADD CONSTRAINT "fk_rails_dd438fdbb4"
+FOREIGN KEY ("goal_id")
+  REFERENCES "goals" ("id")
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "team_goals" ADD CONSTRAINT "fk_rails_b57dcb7fa9"
+FOREIGN KEY ("team_id")
+  REFERENCES "teams" ("id")
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "team_users" ADD CONSTRAINT "fk_rails_6a8dc6a6fc"
+FOREIGN KEY ("team_id")
+  REFERENCES "teams" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "team_users" ADD CONSTRAINT "fk_rails_8b0a3daf0d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "teams" ADD CONSTRAINT "fk_rails_e080df8a94"
+FOREIGN KEY ("company_id")
+  REFERENCES "companies" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "teams" ADD CONSTRAINT "fk_rails_45096701b6"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "user_goals" ADD CONSTRAINT "fk_rails_20014df30e"
+FOREIGN KEY ("goal_id")
+  REFERENCES "goals" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "user_goals" ADD CONSTRAINT "fk_rails_0b38f39319"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "users" ADD CONSTRAINT "fk_rails_7682a3bdfe"
+FOREIGN KEY ("company_id")
+  REFERENCES "companies" ("id")
+[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170502113822)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170502113719),
+(20170502113749),
+(20170502113703),
+(20170502113732),
+(20170502113740),
+(20170502113644),
+(20170502113800),
+(20170502113809);
+
+[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-22 18:30:08 UTC], ["updated_at", 2017-05-22 18:30:08 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "activities" ("id" serial primary key, "body" text, "progress" integer, "goal_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE  INDEX  "index_activities_on_goal_id" ON "activities" USING btree ("goal_id")[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE  INDEX  "index_activities_on_user_id" ON "activities" USING btree ("user_id")[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "companies" ("id" serial primary key, "name" character varying, "invitation_code" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_companies_on_invitation_code" ON "companies" USING btree ("invitation_code")[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "company_goals" ("id" serial primary key, "goal_id" integer, "company_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_company_goals_on_company_id" ON "company_goals" USING btree ("company_id")[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_company_goals_on_goal_id" ON "company_goals" USING btree ("goal_id")[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "goals" ("id" serial primary key, "title" character varying, "goal" integer, "goal_date" timestamp, "goal_progress" integer, "description" text, "slug" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "team_goals" ("id" serial primary key, "team_id" integer, "goal_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE  INDEX  "index_team_goals_on_goal_id" ON "team_goals" USING btree ("goal_id")[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE  INDEX  "index_team_goals_on_team_id" ON "team_goals" USING btree ("team_id")[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "team_users" ("id" serial primary key, "team_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX  "index_team_users_on_team_id" ON "team_users" USING btree ("team_id")[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_team_users_on_user_id" ON "team_users" USING btree ("user_id")[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "teams" ("id" serial primary key, "name" character varying, "company_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_company_id" ON "teams" USING btree ("company_id")[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE  INDEX  "index_teams_on_user_id" ON "teams" USING btree ("user_id")[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "user_goals" ("id" serial primary key, "goal_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_user_goals_on_goal_id" ON "user_goals" USING btree ("goal_id")[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE  INDEX  "index_user_goals_on_user_id" ON "user_goals" USING btree ("user_id")[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "email" character varying, "role" character varying, "password" character varying, "auth_token" character varying, "company_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_company_id" ON "users" USING btree ("company_id")[0m
+  [1m[35m (4.3ms)[0m  [1m[35mALTER TABLE "activities" ADD CONSTRAINT "fk_rails_86f7bac71f"
+FOREIGN KEY ("goal_id")
+  REFERENCES "goals" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "activities" ADD CONSTRAINT "fk_rails_7e11bb717f"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (5.7ms)[0m  [1m[35mALTER TABLE "company_goals" ADD CONSTRAINT "fk_rails_c80f554328"
+FOREIGN KEY ("company_id")
+  REFERENCES "companies" ("id")
+[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "company_goals" ADD CONSTRAINT "fk_rails_9d00262c45"
+FOREIGN KEY ("goal_id")
+  REFERENCES "goals" ("id")
+[0m
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "team_goals" ADD CONSTRAINT "fk_rails_dd438fdbb4"
+FOREIGN KEY ("goal_id")
+  REFERENCES "goals" ("id")
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "team_goals" ADD CONSTRAINT "fk_rails_b57dcb7fa9"
+FOREIGN KEY ("team_id")
+  REFERENCES "teams" ("id")
+[0m
+  [1m[35m (3.1ms)[0m  [1m[35mALTER TABLE "team_users" ADD CONSTRAINT "fk_rails_6a8dc6a6fc"
+FOREIGN KEY ("team_id")
+  REFERENCES "teams" ("id")
+[0m
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "team_users" ADD CONSTRAINT "fk_rails_8b0a3daf0d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "teams" ADD CONSTRAINT "fk_rails_e080df8a94"
+FOREIGN KEY ("company_id")
+  REFERENCES "companies" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "teams" ADD CONSTRAINT "fk_rails_45096701b6"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "user_goals" ADD CONSTRAINT "fk_rails_20014df30e"
+FOREIGN KEY ("goal_id")
+  REFERENCES "goals" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "user_goals" ADD CONSTRAINT "fk_rails_0b38f39319"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "users" ADD CONSTRAINT "fk_rails_7682a3bdfe"
+FOREIGN KEY ("company_id")
+  REFERENCES "companies" ("id")
+[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170502113822)[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170502113719),
+(20170502113749),
+(20170502113703),
+(20170502113732),
+(20170502113740),
+(20170502113644),
+(20170502113800),
+(20170502113809);
+
+[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-05-22 18:30:08 UTC], ["updated_at", 2017-05-22 18:30:08 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "companies" ("name", "invitation_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "First Company"], ["invitation_code", "firstCompany2016"], ["created_at", 2017-05-22 18:30:08 UTC], ["updated_at", 2017-05-22 18:30:08 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "companies" ("name", "invitation_code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Second Company"], ["invitation_code", "secondCompany2016"], ["created_at", 2017-05-22 18:30:08 UTC], ["updated_at", 2017-05-22 18:30:08 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "role", "password", "auth_token", "company_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "First User"], ["email", "user@example.com"], ["role", "role"], ["password", "password"], ["auth_token", "a3dae544a1f3d1bc7ee50abc14067a99"], ["company_id", 1], ["created_at", 2017-05-22 18:30:08 UTC], ["updated_at", 2017-05-22 18:30:08 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "role", "password", "auth_token", "company_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Second User"], ["email", "user1@example.com"], ["role", "role"], ["password", "password"], ["auth_token", "9c25c7441f1f3198579bd95c423df0e2"], ["company_id", 1], ["created_at", 2017-05-22 18:30:08 UTC], ["updated_at", 2017-05-22 18:30:08 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "teams" ("name", "company_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "First Team"], ["company_id", 1], ["user_id", 1], ["created_at", 2017-05-22 18:30:08 UTC], ["updated_at", 2017-05-22 18:30:08 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "teams" ("name", "company_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Second Team"], ["company_id", 2], ["user_id", 2], ["created_at", 2017-05-22 18:30:08 UTC], ["updated_at", 2017-05-22 18:30:08 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "goals" ("title", "goal", "goal_date", "goal_progress", "description", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "First Goal"], ["goal", 100], ["goal_date", 2017-05-22 18:30:08 UTC], ["goal_progress", 0], ["description", "First Goal's description"], ["slug", "first-goal"], ["created_at", 2017-05-22 18:30:08 UTC], ["updated_at", 2017-05-22 18:30:08 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "goals" ("title", "goal", "goal_date", "goal_progress", "description", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Second Goal"], ["goal", 100], ["goal_date", 2017-05-22 18:30:08 UTC], ["goal_progress", 0], ["description", "Second Goal's description"], ["slug", "second-goal"], ["created_at", 2017-05-22 18:30:08 UTC], ["updated_at", 2017-05-22 18:30:08 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "goals" ("title", "goal", "goal_date", "goal_progress", "description", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Third Goal"], ["goal", 100], ["goal_date", 2017-05-22 18:30:08 UTC], ["goal_progress", 0], ["description", "Third Goal's description"], ["slug", "third-goal"], ["created_at", 2017-05-22 18:30:08 UTC], ["updated_at", 2017-05-22 18:30:08 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "activities" ("body", "progress", "goal_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["body", "First Activity's body"], ["progress", 10], ["goal_id", 1], ["user_id", 1], ["created_at", 2017-05-22 18:30:08 UTC], ["updated_at", 2017-05-22 18:30:08 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("body", "progress", "goal_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["body", "Second Activity's body"], ["progress", 10], ["goal_id", 2], ["user_id", 2], ["created_at", 2017-05-22 18:30:08 UTC], ["updated_at", 2017-05-22 18:30:08 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "company_goals" ("goal_id", "company_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["goal_id", 1], ["company_id", 1], ["created_at", 2017-05-22 18:30:08 UTC], ["updated_at", 2017-05-22 18:30:08 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "user_goals" ("goal_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["goal_id", 2], ["user_id", 1], ["created_at", 2017-05-22 18:30:08 UTC], ["updated_at", 2017-05-22 18:30:08 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "team_goals" ("team_id", "goal_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["team_id", 1], ["goal_id", 3], ["created_at", 2017-05-22 18:30:09 UTC], ["updated_at", 2017-05-22 18:30:09 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "team_users" ("team_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["team_id", 1], ["user_id", 1], ["created_at", 2017-05-22 18:30:09 UTC], ["updated_at", 2017-05-22 18:30:09 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "team_users" ("team_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["team_id", 2], ["user_id", 2], ["created_at", 2017-05-22 18:30:09 UTC], ["updated_at", 2017-05-22 18:30:09 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/token" for 127.0.0.1 at 2017-05-22 21:31:09 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#token as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 0.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-05-22 21:33:37 +0300
+Started GET "/users/1" for 127.0.0.1 at 2017-05-22 21:33:47 +0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dhurim/goal-tracker-api/app/controllers/application_controller.rb:5)
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "861af99a9dbf5e052b8b55cfc41e69d7"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_user_from_token rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dhurim/goal-tracker-api/app/controllers/application_controller.rb:5)
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Filter chain halted as :authenticate_user_from_token rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-05-22 21:34:15 +0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/dhurim/goal-tracker-api/app/controllers/application_controller.rb:5)
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Filter chain halted as :authenticate_user_from_token rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-05-22 21:34:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/posts/1"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/1" for 127.0.0.1 at 2017-05-22 21:34:46 +0300
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "861af99a9dbf5e052b8b55cfc41e69d7"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_user_from_token rendered or redirected
+Completed 401 Unauthorized in 13ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-05-22 21:35:09 +0300
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "a3dae544a1f3d1bc7ee50abc14067a99"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCompany Load (0.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 20.8ms | ActiveRecord: 10.4ms)
+
+
